@@ -6,9 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-    <script src="/static/js/shop_popup.js" />
-    <script src="/static/js/shop_cards.js" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title></title>
 </head>
 <body>
@@ -54,6 +51,7 @@
     </header>
     <main>
       <h2 class="main-heading">Магазин</h2>
+      <div class="wrapper_items">
       <div class="card">
          <img src="t-shirt.png" alt="t-shirt" class="img_item">
          <p class="label">T-shirt</p>
@@ -74,8 +72,70 @@
               </div>
           </div>
         </div>
-      </div>
-      
+    </div>
+    <div class="card">
+        <img src="t-shirt.png" alt="t-shirt" class="img_item">
+        <p class="label">T-shirt</p>
+        <p>Очки кармы: 100</p>
+        <label>S</label><input type="radio" value="radio" class="inline" name="size-type">
+        <label>M</label><input type="radio" value="radio" class="inline" name="size-type">
+        <label>L</label><input type="radio" value="radio" class="inline" name="size-type">
+        <button type="submit" value="Submit" id="exchange">Обменять</button>
+        <div id="mypopup" class="popup">
+         <div class="popup-content">
+             <div class="popup-header">
+                 <span class="close">&times;</span>
+             </div>
+             <div class="popup-body">
+                 <p>Спасибо за покупку!</p>
+             </div>
+             <div class="popup-footer">
+             </div>
+         </div>
+       </div>
+   </div>
+   <div class="card">
+    <img src="t-shirt.png" alt="t-shirt" class="img_item">
+    <p class="label">T-shirt</p>
+    <p>Очки кармы: 100</p>
+    <label>S</label><input type="radio" value="radio" class="inline" name="size-type">
+    <label>M</label><input type="radio" value="radio" class="inline" name="size-type">
+    <label>L</label><input type="radio" value="radio" class="inline" name="size-type">
+    <button type="submit" value="Submit" id="exchange">Обменять</button>
+    <div id="mypopup" class="popup">
+     <div class="popup-content">
+         <div class="popup-header">
+             <span class="close">&times;</span>
+         </div>
+         <div class="popup-body">
+             <p>Спасибо за покупку!</p>
+         </div>
+         <div class="popup-footer">
+         </div>
+     </div>
+   </div>
+</div>
+<div class="card">
+    <img src="t-shirt.png" alt="t-shirt" class="img_item">
+    <p class="label">T-shirt</p>
+    <p>Очки кармы: 100</p>
+    <label>S</label><input type="radio" value="radio" class="inline" name="size-type">
+    <label>M</label><input type="radio" value="radio" class="inline" name="size-type">
+    <label>L</label><input type="radio" value="radio" class="inline" name="size-type">
+    <button type="submit" value="Submit" id="exchange">Обменять</button>
+    <div id="mypopup" class="popup">
+     <div class="popup-content">
+         <div class="popup-header">
+             <span class="close">&times;</span>
+         </div>
+         <div class="popup-body">
+             <p>Спасибо за покупку!</p>
+         </div>
+         <div class="popup-footer">
+         </div>
+     </div>
+   </div>
+</div>
     </main>
     <footer class="footer">
         <img src="/static/images/ffmito.jpeg" alt="ФФМиТО" class="ffmito-img">
@@ -89,5 +149,19 @@
         </a>
         </div>
     </footer>
+    <script>
+            let popup = document.getElementById('mypopup'),
+                popupToggle = document.getElementById('exchange'),
+                popupClose = document.querySelector('.close');
+
+                popupToggle.onclick = function() {
+                    popup.style.display="block";
+                };
+
+                popupClose.onclick = function () {
+                    popup.style.display="none";
+                }
+
+        </script>
 </body>
 </html>
